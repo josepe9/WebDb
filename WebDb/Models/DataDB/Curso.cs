@@ -2,19 +2,15 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    public class Alumno
+
+    public class Curso
     {
-        public int AlumnoId { get; set; }
+        public int CursoId { get; set; }
 
         [StringLength(40)]
-        [Required]
         public string Nombre { get; set; }
-        
-        [StringLength(60)]
-        public string Direccion { get; set; }
-
-        [StringLength(25)]
-        public string Telefono { get; set; }
+        [StringLength(30)]
+        public string  Descripcion { get; set; }
 
         public ICollection<Matricula> Matriculas { get; set; }
     }
